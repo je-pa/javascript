@@ -1,0 +1,29 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var arr = [1,2,3,4,5];
+            arr.length=3;//자바에서는 final
+            console.log(arr.length);//3
+            arr[3]=10;
+            console.log(arr.length);//4
+            console.log('----------')
+            for(var i=0;i<arr.length;i++){
+                console.log(arr[i]);
+            }
+            console.log('--------------')
+            function print(item){
+                console.log(item);
+            }
+            var result = arr.forEach(print);//1 2 3 10 
+            console.log('--------------');
+            console.log(result);
+        </script>
+    </body>
+    </html>

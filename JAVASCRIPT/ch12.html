@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr2 = [10,20,30,40];
+        var result = arr2.map(function(item){
+            return item*2;
+        });
+
+        function myMap(item){
+            return item -2;
+        }
+        var result2 = arr2.map(myMap);
+
+        var result3 = arr2.map(function(item){
+            if(item>=30){
+                return item*2;
+            }
+            return item;
+        });//10, 20, 60, 80(30이상인 것들만 곱하기 2하기 미션)
+
+        var result4 = arr2.map(function(item){
+            if(item>35){
+                return item+5;
+            }
+                return item-5;
+        });
+        console.log('r : '+result);
+        console.log('r2 : '+result2);
+        console.log('arr2 : '+arr2);//원본은 건들지 않음!
+        console.log('r3 : '+result3);
+        console.log('r4 : '+result4);
+    </script>
+</body>
+</html>

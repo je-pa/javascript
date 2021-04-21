@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var arr=[1,2,3,4,5,6,7,8];
+        
+        var arr2={
+            0:1,
+            1:2,
+            2:3,
+            3:4,
+            4:5,
+            5:6,
+            6:7,
+            7:8,
+            length:8,
+            forEach: function(f){
+                for(var i=0;i<this.length;i++){
+                    f(this[i]);
+                }
+            },
+            map: function(f){
+                var result=[];
+                for(var i=0;i<this.length;i++){
+                    //result[i]=f(this[i]);
+                    result.push(f(this[i]));
+                }
+                return result;
+            },
+            filter: function(f){
+                var a=[];
+                for(var i=0;i<this.length;i++){
+                    if(f(this[i])){
+                      a.push(this[i])
+                    }
+                }
+                return a;
+            }
+        };
+
+        var result = arr.filter(function(item){
+            /*if(item%2===0){
+                return false;
+            }
+                return true;
+            */
+           return item%2;
+        })
+        var result2 = arr2.filter(function(item){
+            if(item%2===0){
+                return false;
+            }
+                return true;
+        })
+        console.log('arr : '+arr);
+        console.log('result : '+result);
+        console.log('result.length : '+result.length);
+        console.log('-------------------');
+        console.log(arr2);
+        console.log('result2 : '+result2);
+    </script>
+</body>
+</html>

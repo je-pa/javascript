@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //자바스크립트에서 객체는 멤버필드밖에 없다고 생각
+        var obj={ //={}는 객체!!
+            name: '홍길동',
+            age: 30,
+            run: function(){ //익명함수
+                console.log('%s가 달린다',this.name);
+            }
+        };//json이 될아이
+        console.log(obj);//object
+        obj.run();
+        obj.height = 170; //값추가
+        delete obj.height;//값 삭제
+        var sum = function(n1,n2){
+            return n1+n2;
+        }
+        function sum2(n1,n2){
+            return n1+n2;
+        }
+    </script>
+</body>
+</html>

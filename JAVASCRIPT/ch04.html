@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var val_1= '10';
+        //let(var이랑 호이스팅현상의 차이) , const(상수)
+        var val_2 = 5;
+        console.log(val_1 + val_2);//문자열 105
+        console.log(parseInt(vla_1)+val_2);//숫자 계산
+        console.log(Number(vla_1)+val_2);//숫자 계산
+        console.log(val_1 * val_2);//숫자 계산하거나 NaN (숫자가 아니다)
+        console.log(val_1 - val_2);//숫자 계산하거나 NaN (숫자가 아니다)
+        console.log(val_1 / val_2);//숫자 계산하거나 NaN (숫자가 아니다)
+        console.log(val_1 % val_2);//숫자 계산하거나 NaN (숫자가 아니다)
+        
+        console.log('-------');
+        var val_3 = 7;
+        var val_4 = 9;
+        console.log(val_3+val_4); //숫자 계산
+        console.log(''+val_3+val_4); //문자열
+        console.log(String(val_3)+val_4); //문자열 
+    </script>
+</body>
+</html>
