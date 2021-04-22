@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var fn = function(resolve,reject){
+            //오래걸리는 작업
+            if(작업이 잘 완료됐다면){
+                resolve();
+            }else{
+                reject;
+            }
+        }
+        */
+        //var prom = new Promise(fn);
+        //자바스크립트에서 오래걸리는 작업은 무조건 promise로 감싼다
+        //ajax
+
+        var pro1=new Promise(function(resolve,reject){
+            //resolve,reject 둘다 함수
+            //resolve는 잘 마무리되면 사용하는 함수?
+            //reject는 오류가 떴을때 사용하는 함수?
+            setTimeout(function() {
+                //resolve(100);
+                reject(200);
+            }, 1000);
+        });
+        pro1.then(function(aaaa){ //resolve가 호출되야 실행함!!!!!!!
+            console.log('then : '+aaaa);
+        });
+        pro1.catch(function(err){ //reject
+            console.log('err : '+err);
+        });
+
+        pro1.then(function(item){
+            console.log('item : '+item);
+            console.log(item);
+        }).catch(function(err){
+            console.log('err : '+err);
+        }).then(function(){
+            console.log('하하하하'); 
+            //무조건 실행?
+            //닫는거
+            //stream (빨대)
+        });
+        /*
+        var pro2 = new Promise(function(resolve){
+            setTimeout(function() {
+                resolve(2);
+            }, 3000);
+        })
+        pro1.then(function(res){
+            console.log('res : '+res);
+        });
+        */
+    </script>
+</body>
+</html>
